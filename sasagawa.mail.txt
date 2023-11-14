@@ -1,0 +1,7 @@
+笹川代表アドレス
+ywg.japan@gmail.com
+
+font-size: calc(16px + 8 * ((100vw - 320px) / 680));
+
+
+<div style="width: 20%;">男性の育児休業取得率＝</div>

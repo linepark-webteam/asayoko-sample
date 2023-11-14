@@ -1,0 +1,11 @@
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</IfModule>
+
+RewriteEngine On
+Redirect permanent /public_html/ https://asayoko-shusei.online/
+# www無しのURLに統一
+RewriteCond %{HTTP_HOST} ^www\.asayoko-shusei\.online
+RewriteRule ^(.*) https://asayoko-shusei.online/$1 [R=301,L]
