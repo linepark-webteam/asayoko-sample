@@ -4,8 +4,8 @@ if ($_POST) {
   $memberType = htmlspecialchars($_POST['memberType']);
   $registrationLocation = htmlspecialchars($_POST['registrationLocation']);
   $companyName = htmlspecialchars($_POST['companyName']);
-  $firstName = htmlspecialchars($_POST['name']);
-  $lastName = htmlspecialchars($_POST['kana']);
+  $name = htmlspecialchars($_POST['name']);
+  $kana = htmlspecialchars($_POST['kana']);
   $email = htmlspecialchars($_POST['email']);
   $phone = htmlspecialchars($_POST['phone']);
   $message = htmlspecialchars($_POST['message']);
@@ -25,7 +25,7 @@ if ($_POST) {
       <input type="hidden" name="registrationLocation" value="<?php echo $registrationLocation; ?>">
       <input type="hidden" name="companyName" value="<?php echo $companyName; ?>">
       <input type="hidden" name="name" value="<?php echo $name; ?>">
-      <input type="hidden" name="kana" value="<?php echo $lastName; ?>">
+      <input type="hidden" name="kana" value="<?php echo $kana; ?>">
       <input type="hidden" name="email" value="<?php echo $email; ?>">
       <input type="hidden" name="phone" value="<?php echo $phone; ?>">
       <input type="hidden" name="message" value="<?php echo $message; ?>">
