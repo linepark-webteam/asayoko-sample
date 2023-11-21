@@ -4,10 +4,9 @@
   display: flex;
   justify-content: left;
   padding: 0;
-  
   position: fixed;
   z-index: 100;
-  transition: background-color 1s; /* 背景色と高さをじんわり変更 */
+  transition: background-color .5s; /* 背景色と高さをじんわり変更 */
   width: 100%;
   height: 13vw;
 }
@@ -16,7 +15,7 @@
   {
   .header {
     position: fixed;
-    height: 100px
+    height: 80px
   }
 }
 /* ファーストビューを過ぎたあとのヘッダー */
@@ -31,6 +30,9 @@
 @media screen and (min-width: 960px) {
   .pc-logo {
     display: block;
+  }
+  .pc-logo img{
+    width: 80%;
   }
 }
 .mobile-logo{
