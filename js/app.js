@@ -210,8 +210,13 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   toggleDisplayByDate(
     "schedule2",
+    "2023-11-30T00:00:00",
+    "2024-01-20T23:59:59"
+  );
+  toggleDisplayByDate(
+    "schedule3",
     "2023-＊＊-＊＊T00:00:00",
-    "2023-＊＊-＊＊T23:59:59"
+    "2024-＊＊-＊＊T23:59:59"
   );
 });
 
