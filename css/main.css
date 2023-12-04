@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /* background-color: #fff; */
 }
 
 body {
@@ -10,40 +9,29 @@ body {
 
 /* ファーストビュー */
 .fv {
-  height: 80vh;
-  width: 100vw;
+  height: auto;
+  max-width: 100vw;
   margin-bottom: 10vw;
 }
 @media screen and (min-width: 960px) {
   .fv {
-    width: 100%;
     height: auto;
+    max-width: 100vw;
     margin-bottom: 100px;
   }
 }
 
-/* .fv img {
-  height: 80vh;
-  width: 100vw;
-} */
-/* @media screen and (min-width: 960px) {
-  .fv img{
-    width: 100%;
-    height: auto;
-  }
-} */
 .img-wrap {
   background: url(../img/fv.jpg) center top;
   background-size: cover;
   position: relative;
   height: 80vh;
-  width: 100%;
+  max-width: 100%;
 }
 @media screen and (min-width: 960px) {
   .img-wrap {
     background-image: url(../img/fv.jpg);
-    width: 100vw;
-    /* height: auto; */
+    max-width: 100%;
   }
 }
 .img-wrap::after {
@@ -63,7 +51,7 @@ body {
   color: #fff;
   top: 40%;
   left: 50%;
-  width: 100vw;
+  max-width: 100vw;
   text-align: center;
   transform: translate(-50%, -50%);
   font-size: 5vw;
@@ -270,9 +258,8 @@ body {
 
 .delimiter {
   /* 背景画像 */
-  width: 100vw;
+  width: 100%;
   height: 70vh;
-  /* background-image: url(../img/akarenga.png); */
   background-image: url(../img/yokohama-landmark-crop.jpg);
   background-color: rgba(0, 0, 0, 1);
   background-blend-mode: lighten;
