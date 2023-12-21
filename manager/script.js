@@ -1,20 +1,100 @@
+// 画像データと関連情報を一元管理する配列
+const imageData = [
+  {
+    src: "../img/sasagawa1.jpg",
+    repName: "代表世話人",
+    repTitle: "笹川 政吉",
+  },
+  {
+    src: "../img/img2.jpg",
+    repName: "世話人2",
+    repTitle: "氏名2",
+  },
+  {
+    src: "../img/img3.jpg",
+    repName: "世話人3",
+    repTitle: "氏名3",
+  },
+  // 他の画像と関連情報も同様に追加
+];
+
+// // クリックされたサムネイルの情報を更新する関数
+// function updateImageData(clickedImageSrc) {
+//   const repData = imageData.find((data) => data.src === clickedImageSrc);
+
+//   // クリックされたサムネイルに関連するHTMLを取得
+//   const newHTML = bios[clickedImageSrc];
+
+//   // 表示を切り替える要素に新しいHTMLと代表世話人情報を設定
+//   document.getElementById("mainBio").innerHTML = newHTML;
+//   document.getElementById("repName").textContent = repData.repName;
+//   document.getElementById("repTitle").textContent = repData.repTitle;
+
+//   // 画像を更新
+//   document.getElementById("mainImage").src = clickedImageSrc;
+
+//   // data-img1、data-img2、data-img3 の各要素の src を更新
+//   const dataImages = document.querySelectorAll(".data-img1, .data-img2, .data-img3");
+//   dataImages.forEach((element, index) => {
+//     const newSrc = imageData[index].src;
+//     element.src = newSrc;
+//   });
+// }
+
+// // thumbクラスを持つすべてのイメージ要素を取得
+// const thumbImages = document.querySelectorAll(".thumb");
+
+// // mainImageContainer要素を取得
+// const mainImageContainer = document.querySelector("#mainImageContainer");
+
+// // thumbImagesの各要素にクリックイベントリスナーを設定
+// thumbImages.forEach(function (image) {
+//   image.addEventListener("click", function () {
+//     // クリックされたイメージのsrc属性を取得
+//     const clickedImageSrc = image.getAttribute("src");
+
+//     // クリックされたイメージのalt属性を取得
+//     const altText = image.getAttribute("alt");
+
+//     // mainImageのsrc属性をクリックされたイメージのsrcに設定
+//     document.getElementById("mainImage").src = clickedImageSrc;
+
+//     // mainImageのalt属性をクリックされたイメージのaltに設定
+//     document.getElementById("mainImage").alt = altText;
+
+//     // mainImageContainer内の要素を全て削除
+//     while (mainImageContainer.firstChild) {
+//       mainImageContainer.removeChild(mainImageContainer.firstChild);
+//     }
+
+//     // 新しい要素を追加
+//     const newImage = document.createElement("img");
+//     newImage.src = clickedImageSrc;
+//     newImage.alt = altText;
+//     mainImageContainer.appendChild(newImage);
+
+//     // 画像データと関連情報の更新処理を呼び出す
+//     updateImageData(clickedImageSrc);
+//   });
+// });
+
 function changeMainImage(newSrc) {
   // mainImageのsrc属性を新しいsrcに変更
   document.getElementById("mainImage").src = newSrc;
 }
 
 // sasagawa1の画像をクリックしたときの処理
-document.querySelector(".data-img1").addEventListener("click", function () {
+document.querySelector(".each-img1").addEventListener("click", function () {
   changeMainImage("../img/sasagawa1.jpg");
 });
 
 // sasagawa2の画像をクリックしたときの処理
-document.querySelector(".data-img2").addEventListener("click", function () {
+document.querySelector(".each-img2").addEventListener("click", function () {
   changeMainImage("../img/sasagawa2.jpg");
 });
 
 // sasagawa3の画像をクリックしたときの処理
-document.querySelector(".data-img3").addEventListener("click", function () {
+document.querySelector(".each-img3").addEventListener("click", function () {
   changeMainImage("../img/sasagawa3.jpg");
 });
 
@@ -25,15 +105,6 @@ document.querySelectorAll(".thumb").forEach(function (thumbnail) {
   });
 });
 
-// クリックされたサムネイルに関連するHTMLを取得
-const newHTML = bios[newSrc];
-
-// 表示を切り替える要素に新しいHTMLと代表世話人情報を設定
-document.getElementById("mainBio").innerHTML = newHTML;
-document.getElementById("repName").textContent = representatives[newSrc].repName;
-document.getElementById("repTitle").textContent = representatives[newSrc].repTitle;
-
-
 const bios = {
   "../img/sasagawa1.jpg": `
       <table class="table table-bordered my-5">
@@ -43,9 +114,9 @@ const bios = {
           <tr><td>会社PR</td><td>PRポイント</td></tr>
       </table>
       <div class="row">
-      <img class="data-img1 col-3" src="../img/sasagawa1.jpg" alt="笹川 政吉">
-      <img class="data-img2 col-3" src="../img/sasagawa2.jpg" alt="笹川 政吉">
-      <img class="data-img3 col-3" src="../img/sasagawa3.jpg" alt="笹川 政吉">
+      <img class="each-img1 col-3" src="../img/sasagawa1.jpg" alt="笹川 政吉">
+      <img class="each-img2 col-3" src="../img/sasagawa2.jpg" alt="笹川 政吉">
+      <img class="each-img3 col-3" src="../img/sasagawa3.jpg" alt="笹川 政吉">
     </div>`,
   "../img/img2.jpg": `
   <table class="table table-bordered my-5">
@@ -129,24 +200,44 @@ const representatives = {
 
 document.querySelectorAll(".thumb").forEach((item) => {
   item.addEventListener("click", function () {
-    const repData = representatives[this.getAttribute("src")];
-    
+    const repEach = representatives[this.getAttribute("src")];
+
     // クリックされたサムネイルに関連するHTMLを取得
     const newHTML = bios[this.getAttribute("src")];
 
     // 表示を切り替える要素（例: mainBio）に新しいHTMLと代表世話人情報を設定
     document.getElementById("mainBio").innerHTML = newHTML;
-    document.getElementById("repName").textContent = repData.repName;
-    document.getElementById("repTitle").textContent = repData.repTitle;
+    document.getElementById("repName").textContent = repEach.repName;
+    document.getElementById("repTitle").textContent = repEach.repTitle;
 
     // 画像を更新
-    document.getElementById("mainImage").src = this.getAttribute("src");
-    document.getElementsByClassName("data-img1").src = this.getAttribute("src");
-    document.getElementsByClassName("data-img2").src = this.getAttribute("src");
-    document.getElementsByClassName("data-img3").src = this.getAttribute("src");
+    const clickedImageSrc = this.getAttribute("src");
+    document.getElementById("mainImage").src = clickedImageSrc;
+
+    // each-img1、each-img2、each-img3 の各要素の src を更新
+    const eachImages = document.querySelectorAll(
+      ".each-img1, .each-img2, .each-img3"
+    );
+    eachImages.forEach((element, index) => {
+      const newSrc = `../img/sasagawa${index + 1}.jpg`;
+      element.src = newSrc;
+    });
+    // sasagawa1の画像をクリックしたときの処理
+    document.querySelector(".each-img1").addEventListener("click", function () {
+      changeMainImage("../img/sasagawa1.jpg");
+    });
+
+    // sasagawa2の画像をクリックしたときの処理
+    document.querySelector(".each-img2").addEventListener("click", function () {
+      changeMainImage("../img/sasagawa2.jpg");
+    });
+
+    // sasagawa3の画像をクリックしたときの処理
+    document.querySelector(".each-img3").addEventListener("click", function () {
+      changeMainImage("../img/sasagawa3.jpg");
+    });
   });
 });
-
 
 // thumbクラスを持つすべてのイメージ要素を取得
 const thumbImages = document.querySelectorAll(".thumb");
