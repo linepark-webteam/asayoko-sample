@@ -114,9 +114,9 @@ const bios = {
           <tr><td>会社PR</td><td>PRポイント</td></tr>
       </table>
       <div class="row">
-      <img class="each-img1 col-3" src="../img/sasagawa1.jpg" alt="笹川 政吉">
-      <img class="each-img2 col-3" src="../img/sasagawa2.jpg" alt="笹川 政吉">
-      <img class="each-img3 col-3" src="../img/sasagawa3.jpg" alt="笹川 政吉">
+      <a href="#desc" class="col-3"><img class="each-img1 col-12" src="../img/sasagawa1.jpg" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img2 col-12" src="../img/sasagawa2.jpg" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img3 col-12" src="../img/sasagawa3.jpg" alt="笹川 政吉"></a>
     </div>`,
   "../img/img2.jpg": `
   <table class="table table-bordered my-5">
