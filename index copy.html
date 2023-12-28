@@ -24,21 +24,19 @@
   <link rel="stylesheet" href="./css/my-bootstrap.css">
   <link rel="stylesheet" href="./css/ress.css" />
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/main.css?v_02" />
+  <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
+  <link rel="stylesheet" href="./css/main2.css" />
   <link rel="stylesheet" href="./css/toPagetop.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- ヘッダーここから -->
-  <header class="header row js-header">
-    <div class="d-flex justify-content-between px-3 px-lg-5">
-    <div class="d-flex align-items-center">
-    <h1 class="mobile-logo"> <a href="#"><img src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a></h1>
-    <h1 class="pc-logo"><a href="#"><img src="./img/pc-logo.png" alt="守成クラブあさの横浜" /></a></h1>
-  </div>
-    <h3 class="d-flex align-items-center"><a href="./manager/">世話人紹介</a></h3>
+  <header class="header container-fluid fixed-top row js-header">
+    <div class="d-flex justify-content-between align-items-center px-3 px-lg-5">
+    <h1 class="mobile-logo d-block d-lg-none"><a href="#"><img src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a></h1>
+    <h1 class="pc-logo d-none d-lg-block"><a href="#"><img src="./img/pc-logo.png" alt="守成クラブあさの横浜" /></a></h1>
+    <h3><a href="./manager/">世話人紹介</a></h3>
   </div>
   </header>
   <!-- ヘッダーここまで -->
@@ -49,10 +47,12 @@
   </div>
 
   <!-- ファーストビュー -->
-  <section class="fv js-mv slider">
-    <div class="img-wrap container-fluid">
-      <p class="fv-headline">横浜の例会はあさから始まる！</p>
-      <p class="fv-text">横浜では11会場目、関東では守成クラブ初となる「あさ」の会場です。</p>
+  <section class="fv row container-fluid mb-5 slider">
+    <div class="fv-wrap container-fluid col-12">
+      <div class="col-10">
+        <p class="fv-head col-12 mb-0">横浜の例会はあさから始まる！</p>
+        <p class="fv-text col-10">横浜では11会場目、関東では守成クラブ初となる「あさ」の会場です。</p>
+      </div>
     </div>
   </section>
 
