@@ -16,7 +16,7 @@ if ($_POST) {
     <div class="contact-headline">
       <h3>以下の内容でお問い合わせを受け付けます。ご確認ください。</h3>
     </div>
-    <form id="confirm-form" action="submit.php" method="post" style="
+    <form id="confirm-form" action="sendmail.php" method="post" style="
         display: flex;
         justify-content: center;
         font-size: calc(16px + 8 * ((100vw - 320px) / 1120));
