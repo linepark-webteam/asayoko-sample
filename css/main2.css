@@ -7,27 +7,22 @@ body {
   font-family: "Noto Sans JP", "Roboto", sans-serif;
 }
 
+.container-fluid {
+  margin: 0;
+}
+
 /* ファーストビュー */
 .fv {
+  background: url(../img/fv.jpg);
   height: 100vh;
-  width: 100vw;
-}
-@media screen and (min-width: 960px) {
-  .fv {
-    background: url(../img/fv.jpg) center top;
-    width: 100vw;
-    background-size: cover;
-  }
+  width: 100%;
+  background-size: cover;
 }
 
 .fv-wrap {
   position: relative;
 }
-@media screen and (min-width: 960px) {
-  .fv-wrap {
-    padding: 0;
-  }
-}
+
 .fv-wrap::after {
   content: "";
   background-color: rgba(30, 115, 190, 0.4);
@@ -40,205 +35,17 @@ body {
 
 .fv-head {
   font-family: serif;
-  position: absolute;
   z-index: 1;
   color: #fff;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   font-weight: bold;
-}
-@media screen and (min-width: 960px) {
-  .fv-head {
-    font-size: 36px;
-  }
 }
 
 .fv-text {
   font-family: serif;
-  position: absolute;
   z-index: 1;
   color: #fff;
-  text-align: center;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(.6rem, 2vw, 2rem);
-}
-@media screen and (min-width: 960px) {
-  .fv-text {
-    font-size: 18px;
-  }
-}
-
-.slider img {
-  transform-origin: center top;
-  transform: scale(1.1);
-  transition: 5s ease-out;
-}
-.slider .slick-active img {
-  transform: scale(1);
-}
-
-.text-animate {
-  font-size: 36px;
-  opacity: 0.5; /* ほのかに光らせるための不透明度 */
-  transition: opacity 0.8s; /* ほのかな光のアニメーション */
-}
-.text-animate2 {
-  font-size: 24px;
-  opacity: 0.5;
-  transition: opacity 0.8s;
-}
-
-.character-animate, .character-animate2 {
-  display: inline-block;
-  opacity: 0;
-  transition: opacity 0.8s;
-}
-
-
-/* 例会申し込み */
-.application {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  margin-bottom: 20vw;
-}
-@media screen and (min-width: 960px) {
-  .application {
-    margin-bottom: 100px;
-  }
-}
-
-.application h2 {
-  margin-bottom: 10vw;
-  font-weight: bold;
-}
-@media screen and (min-width: 960px) {
-  .application h2 {
-    margin-bottom: 50px;
-  }
-}
-
-.application-btn {
-  margin-bottom: 10vw;
-}
-@media screen and (min-width: 960px) {
-  .application-btn {
-    margin-bottom: 50px;
-  }
-}
-
-.application-btn a {
-  display: inline-block;
-  text-decoration: none;
-  color: #1e73be !important;
-  border-color: rgba(30, 115, 190, 1);
-  border: 1px solid;
-  border-radius: 60px;
-  font-weight: 600;
-  min-width: 240px;
-  height: 50px;
-  line-height: 50px;
-  font-size: calc(12px + 2 * ((100vw - 320px) / 680));
-  padding: 0 15px;
-  width: 90%;
-}
-@media screen and (min-width: 500px) {
-  .application-btn a {
-    width: 70%;
-    padding: 0 15px;
-    /* height: 8vw; */
-  }
-}
-@media screen and (min-width: 960px) {
-  .application-btn a {
-    border: 1px solid;
-    border-radius: 60px;
-    font-weight: 600;
-    min-width: 240px;
-    height: 80px;
-    line-height: 50px;
-    font-size: 14px;
-    padding: 15px 20px;
-    width: 40%;
-    transition: all 0.3s;
-  }
-}
-.application-btn a:hover {
-  color: #fff !important;
-  background-color: #04f7ff;
-  border-color: rgba(30, 115, 190, 1);
-}
-
-/* 守成ロゴ */
-.shusei-logo {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  margin: 10vw;
-}
-@media screen and (min-width: 960px) {
-  .shusei-logo {
-    margin-bottom: 100px;
-  }
-}
-.shusei-logo h2 {
-  margin-bottom: 5vw;
-}
-@media screen and (min-width: 960px) {
-  .shusei-logo h2 {
-    margin-bottom: 50px;
-  }
-}
-
-.shusei-logo-wrap {
-  display: flex;
-  flex-direction: column;
-  line-height: 20vw;
-}
-@media screen and (min-width: 960px) {
-  .shusei-logo-wrap {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: top;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .shusei-logo-description {
-    display: flex;
-    align-items: center;
-  }
-}
-.shusei-logo-description a {
-  text-decoration: none;
-  color: red;
-}
-.shusei-logo-img img {
-  width: 50vw;
-}
-@media screen and (min-width: 960px) {
-  .shusei-logo-img img {
-    width: 100%;
-  }
-}
-
-/* 守成クラブ紹介 */
-.about {
-  max-width: 1920px;
-  margin: 0 auto 5vw;
-}
-@media screen and (min-width: 960px) {
-  .about {
-    margin: 0 auto 100px;
-  }
+  font-size: clamp(.6rem, 1vw, 2rem);
 }
 
 .about-wrap {
@@ -247,8 +54,8 @@ body {
   align-items: center;
 }
 
+/* 背景画像 */
 .delimiter {
-  /* 背景画像 */
   width: 100%;
   height: 70vh;
   background-image: url(../img/yokohama-landmark-crop.jpg);

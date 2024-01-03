@@ -11,12 +11,6 @@
   margin: 0; */
 }
 
-@media screen and (min-width: 960px)
-  {
-  .header {
-    
-  }
-}
 /* ファーストビューを過ぎたあとのヘッダー */
 .header.transform {
   background-color: rgba(255,255,255,1.0); /* 背景の透過を解除 */

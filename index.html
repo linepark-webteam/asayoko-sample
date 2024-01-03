@@ -24,21 +24,19 @@
   <link rel="stylesheet" href="./css/my-bootstrap.css">
   <link rel="stylesheet" href="./css/ress.css" />
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/main.css?v_02" />
+  <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
+  <link rel="stylesheet" href="./css/main2.css" />
   <link rel="stylesheet" href="./css/toPagetop.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
   <!-- ヘッダーここから -->
-  <header class="header row js-header">
-    <div class="d-flex justify-content-between px-3 px-lg-5">
-    <div class="d-flex align-items-center">
-    <h1 class="mobile-logo"> <a href="#"><img src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a></h1>
-    <h1 class="pc-logo"><a href="#"><img src="./img/pc-logo.png" alt="守成クラブあさの横浜" /></a></h1>
-  </div>
-    <h3 class="d-flex align-items-center"><a href="./manager/">世話人紹介</a></h3>
+  <header class="header container-fluid fixed-top js-header">
+    <div class="d-flex justify-content-between align-items-center px-3 px-lg-5">
+    <h1 class="mobile-logo d-block d-lg-none"><a href="#"><img src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a></h1>
+    <h1 class="pc-logo d-none d-lg-block"><a href="#"><img src="./img/pc-logo.png" alt="守成クラブあさの横浜" /></a></h1>
+    <h3><a href="./manager/">世話人紹介</a></h3>
   </div>
   </header>
   <!-- ヘッダーここまで -->
@@ -49,52 +47,47 @@
   </div>
 
   <!-- ファーストビュー -->
-  <section class="fv js-mv slider">
-    <div class="img-wrap container-fluid">
-      <p class="fv-headline">横浜の例会はあさから始まる！</p>
-      <p class="fv-text">横浜では11会場目、関東では守成クラブ初となる「あさ」の会場です。</p>
+  <section class="fv js-mv slider row container-fluid mb-5 slider">
+    <div class="fv-wrap d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center flex-column col-12">
+        <p class="fv-head mb-1">横浜の例会はあさから始まる！</p>
+        <p class="fv-text">横浜では11会場目、関東では守成クラブ初となる「あさ」の会場です。</p>
+      </div>
     </div>
   </section>
 
-  <section class="application">
-    <h2 class="font-bold">例会申し込みフォーム</h2>
-    <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=6986">
-        <span class="label">第24回 1月20日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7055">
-        <span class="label">第25回 2月17日(土) 例会お申し込みフォーム</span>
-      </a>
+  <section class="application container mb-2 mb-lg-5">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+    <h2 class="fw-bold mb-3 mb-lg-5">例会申し込みフォーム</h2>
+      <div class="application-btn schedule1 mb-3 mb-lg-5">
+        <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=6986">
+          <button type="button" class="btn btn-outline-primary">第24回 1月20日(土) 例会お申し込みフォーム</button>
+        </a>
+      </div>
+      <div class="application-btn schedule2 mb-5">
+        <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7055">
+        <button type="button" class="btn btn-outline-primary">第25回 2月17日(土) 例会お申し込みフォーム</button>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- 守成ロゴ -->
-  <section class="shusei-logo">
-    <!-- <h2>例会スケジュール</h2> -->
-    <div class="shusei-logo-wrap container">
-      <!-- <div class="shusei-logo-description">
-        <a href="#">
-          <span class="label">第18回例会　7月15日</span>
-        </a>
-      </div> -->
-      <div class="shusei-logo-img d-flex justify-content-center col-lg-4">
-        <img src="./img/slider_logo.png" alt="がんばれ">
-      </div>
+  <section class="shusei-logo container mb-3 mb-lg-5">
+    <div class="shusei-logo-wrap d-flex justify-content-center">
+        <img class="col-6 col-lg-4" src="./img/slider_logo.png" alt="がんばれ">
     </div>
-
   </section>
 
   <!-- CONTENTS -->
-  <section class="about">
+  <section class="about container-fluid mb-5">
     <div class="about-wrap">
-      <div class="delimiter">
-        <div class="section-title">
+      <div class="delimiter container-fluid">
+        <div class="section-title d-flex justify-content-center">
           <h2>Contents</h2>
         </div>
         <!-- タブメニューを構成するブロック -->
-        <div class="about-list">
+        <div class="about-list container">
           <a class="about-list-item is-btn-active">例会情報</a>
           <a class="about-list-item">代表あいさつ</a>
           <a class="about-list-item">守成クラブとは</a>
@@ -103,7 +96,7 @@
     </div>
 
     <!-- コンテンツを構成するブロック -->
-    <div class="about-contents-wrap">
+    <div class="about-contents-wrap container">
       <div class="about-contents is-contents-active">
         <div class="about-img">
           <img src="./img/meeting.jpg" alt="例会時の写真">
@@ -160,26 +153,28 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
-  <section class="application">
-    <h2>例会申し込みフォーム</h2>
-    <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=6986">
-        <span class="label">第24回 1月20日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7055">
-        <span class="label">第25回 2月17日(土) 例会お申し込みフォーム</span>
-      </a>
+
+  <section class="application container mb-5">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+    <h2 class="fw-bold mb-3 mb-lg-5">例会申し込みフォーム</h2>
+      <div class="application-btn schedule1 mb-3 mb-lg-5">
+        <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=6986">
+          <button type="button" class="btn btn-outline-primary">第24回 1月20日(土) 例会お申し込みフォーム</button>
+        </a>
+      </div>
+      <div class="application-btn schedule2 mb-5">
+        <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7055">
+        <button type="button" class="btn btn-outline-primary">第25回 2月17日(土) 例会お申し込みフォーム</button>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- アクセス -->
-  <section class="access">
-    <div class="access-container">
+  <section class="access container">
+    <div class="access-container row">
       <div class="access-headline">
         <h2>会場情報</h2>
       </div>
@@ -189,7 +184,7 @@
           <p>2階トリニティ</p>
         </div>
         <div class="access-img">
-          <img src="./img/access-img.png" alt="会場写真">
+          <img class="col-12" src="./img/access-img.png" alt="会場写真">
         </div>
       </div>
       <div class="access-desc">
@@ -220,7 +215,7 @@
 
 
   <!-- お問い合わせ -->
-  <section class="contact">
+  <section class="contact container">
     <div class="contact-container">
       <div class="contact-headline">
         <h2>お問い合わせ</h2>
@@ -276,7 +271,7 @@
 
   </section>
 
-  <footer>
+  <footer class="container-fluid">
     <div class="footer-items">
       <div class="footer-item">
         <a href="#"><img class="mobile-logo" src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a>
