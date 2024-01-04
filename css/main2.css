@@ -7,6 +7,14 @@ body {
   font-family: "Noto Sans JP", "Roboto", sans-serif;
 }
 
+h2,h3 {
+  font-weight: bold;
+}
+
+p {
+  font-weight: 500;
+}
+
 .container-fluid {
   margin: 0;
 }
@@ -14,8 +22,8 @@ body {
 /* ファーストビュー */
 .fv {
   background: url(../img/fv.jpg);
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -50,14 +58,11 @@ body {
 
 /* 背景画像 */
 .delimiter {
-  position: relative; /* 疑似要素を配置するために必要 */
   width: 100%;
   height: 70vh;
-  background-image: url(../img/yokohama-landmark-crop.jpg);
-  background-blend-mode: lighten;
-  background-repeat: no-repeat;
+  background-image: url(../img/yokohama-landmark-crop.jpg);;
   background-size: 500%;
-  background-position: center top;
+  background-position: center bottom;
 }
 @media screen and (min-width: 390px) {
   .delimiter {
@@ -85,160 +90,36 @@ body {
 @media screen and (min-width: 1280px) {
   .delimiter {
     background-image: url(../img/yokohama-landmark.jpg);
-    background-size: 190%;
+    background-size: 100%;
   }
 }
-.delimiter::before {
-  content: ""; /* 疑似要素を表示するために必要 */
+
+.delimiter-wrap {
+  position: relative;
+}
+
+.delimiter-wrap::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* ここでマスクの色と透明度を設定 */
-  /* グラデーションを適用する場合は上の行をコメントアウトして下の行を使用 */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
-.section-title {
-  width: 100%;
-  height: 65vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 960px) {
-  .section-title {
-    height: 60vh;
-  }
-}
-.section-title h2 {
+
+.contents {
+  z-index: 1;
   color: #fff;
-
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+.nav-link {
+  color: #333;
+  font-size: clamp(.8rem, 1vw, 2rem);
 }
 
-/* .about-list {
-  display: flex;
-  justify-content: center;
-  height: 5vh;
-}
-@media screen and (min-width: 960px) {
-  .about-list {
-    height: 10vh;
-  }
-}
-.about-list a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-}
-@media screen and (min-width: 960px) {
-  .about-list a {
-    font-size: 16px;
-  }
-}
-.about-list a:hover {
-  background-color: #ffffff;
-} */
-
-/* .about-list-item {
-  display: flex;
-  background-color: rgba(226, 226, 226, 0.8);
-  align-items: center;
-  text-align: center;
-  padding: 20px 0;
-  width: 20%;
-  cursor: pointer;
-  margin-right: 1vw;
-  border-radius: 2vw 2vw 0 0;
-}
-@media screen and (min-width: 960px) {
-  .about-list-item {
-    margin-right: 10px;
-    border-radius: 10px 10px 0 0;
-  }
-}
-.about-list a:hover {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-contents {
-  background-color: #ffffff;
-  display: none;
-  padding: 2vw;
-  width: 100%;
-}
-
-.is-btn-active {
-  display: flex;
-  background-color: #ffffff;
+.active {
   font-weight: bold;
-  padding: 1vw;
-}
-
-.is-contents-active {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-@media screen and (min-width: 960px) {
-  .is-contents-active {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-.is-contents-active img {
-  width: 90vw;
-}
-@media screen and (min-width: 960px) {
-  .is-contents-active img {
-    width: 500px;
-  }
-} */
-
-.about-text {
-  margin-left: 1vw;
-}
-@media screen and (min-width: 960px) {
-  .about-text {
-    margin-left: 30px;
-  }
-}
-
-.about-text h2 {
-  font-size: calc(22px + 2 * ((100vw - 320px) / 640));
-  font-weight: bold;
-  margin-bottom: 1vw;
-}
-@media screen and (min-width: 960px) {
-  .about-text h2 {
-    font-size: 24px;
-  }
-}
-
-.about-text h3 {
-  font-size: calc(18px + 2 * ((100vw - 320px) / 640));
-  font-weight: bold;
-  margin-bottom: 1vw;
-}
-@media screen and (min-width: 960px) {
-  .about-text h3 {
-    font-size: 20px;
-  }
-}
-.about-text p {
-  line-height: 200%;
-  font-size: calc(14px + 6 * ((100vw - 320px) / 640));
-}
-@media screen and (min-width: 960px) {
-  .about-text p {
-    font-size: 16px;
-  }
 }
 
 /* アクセス */
