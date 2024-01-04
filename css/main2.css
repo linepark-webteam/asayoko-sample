@@ -48,18 +48,12 @@ body {
   font-size: clamp(.6rem, 1vw, 2rem);
 }
 
-.about-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* 背景画像 */
 .delimiter {
+  position: relative; /* 疑似要素を配置するために必要 */
   width: 100%;
   height: 70vh;
   background-image: url(../img/yokohama-landmark-crop.jpg);
-  background-color: rgba(0, 0, 0, 1);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
   background-size: 500%;
@@ -94,11 +88,20 @@ body {
     background-size: 190%;
   }
 }
-
+.delimiter::before {
+  content: ""; /* 疑似要素を表示するために必要 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* ここでマスクの色と透明度を設定 */
+  /* グラデーションを適用する場合は上の行をコメントアウトして下の行を使用 */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)); */
+}
 .section-title {
   width: 100%;
   height: 65vh;
-  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,13 +113,12 @@ body {
 }
 .section-title h2 {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0);
+
 }
 
-.about-list {
+/* .about-list {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
   height: 5vh;
 }
 @media screen and (min-width: 960px) {
@@ -137,9 +139,9 @@ body {
 }
 .about-list a:hover {
   background-color: #ffffff;
-}
+} */
 
-.about-list-item {
+/* .about-list-item {
   display: flex;
   background-color: rgba(226, 226, 226, 0.8);
   align-items: center;
@@ -197,7 +199,7 @@ body {
   .is-contents-active img {
     width: 500px;
   }
-}
+} */
 
 .about-text {
   margin-left: 1vw;
