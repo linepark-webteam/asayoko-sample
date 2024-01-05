@@ -40,7 +40,6 @@ p {
   top: 0;
   bottom: 0;
 }
-
 .fv-head {
   font-family: serif;
   z-index: 1;
@@ -48,7 +47,6 @@ p {
   font-size: clamp(1.2rem, 2vw, 2rem);
   font-weight: bold;
 }
-
 .fv-text {
   font-family: serif;
   z-index: 1;
@@ -56,7 +54,11 @@ p {
   font-size: clamp(.6rem, 1vw, 2rem);
 }
 
-/* 背景画像 */
+.application-btn button {
+  font-size: clamp(.8rem, 2vw, 2rem);
+}
+
+/* Contaents 背景画像 */
 .delimiter {
   width: 100%;
   height: 70vh;
@@ -83,14 +85,15 @@ p {
 }
 @media screen and (min-width: 960px) {
   .delimiter {
-    background-size: 250%;
-    background-position: center bottom;
+    background-size: 300%;
+    background-position: center top;
   }
 }
 @media screen and (min-width: 1280px) {
   .delimiter {
     background-image: url(../img/yokohama-landmark.jpg);
-    background-size: 100%;
+    background-size: 150%;
+    background-position: center top;
   }
 }
 
@@ -107,7 +110,6 @@ p {
   top: 0;
   bottom: 0;
 }
-
 .contents {
   z-index: 1;
   color: #fff;
@@ -117,57 +119,13 @@ p {
   color: #333;
   font-size: clamp(.8rem, 1vw, 2rem);
 }
-
 .active {
   font-weight: bold;
 }
 
 /* アクセス */
-.access {
-  margin: 0 auto 10vw;
-}
-@media screen and (min-width: 960px) {
-  .access {
-    margin: 0 auto 100px;
-  }
-}
 
-.access-headline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 10vw auto;
-  font-size: calc(18px + 4 * ((100vw - 320px) / 640));;
-}
-@media screen and (min-width: 960px) {
-  .access-headline {
-    font-size: 22px;
-    margin: 50px auto;
-  }
-}
-
-.access-headline h2{
-  font-weight: bold;
-}
-.access-head {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 70%;
-  margin: 0 auto;
-}
-.access-img img {
-  max-width: 100%;
-}
-
-.access-desc {
-  /* display: flex; */
-  justify-content: center;
-  max-width: 70%;
-  margin: 0 auto;
-}
-.access-desc h3 {
+/* .access-desc h3 {
   font-size: calc(18px + 4 * ((100vw - 320px) / 640));
   margin: 3vw 0;
 }
@@ -220,9 +178,9 @@ p {
     font-size: 18px;
     flex-basis: 33%;;
   }
-}
+} */
 
-@media screen and (min-width: 960px) {
+/* @media screen and (min-width: 960px) {
   .google-map-box {
     flex-basis: 33%;
   }
@@ -267,7 +225,7 @@ p {
     height: 80px;
     width: 100%;
   }
-}
+} */
 
 /* お問い合わせ */
 
