@@ -205,18 +205,18 @@ function toggleDisplayByDate(className, startDate, endDate) {
 document.addEventListener("DOMContentLoaded", function () {
   toggleDisplayByDate(
     "schedule1",
-    "2023-11-30T00:00:00",
-    "2024-02-17T23:59:59"
-  );
-  toggleDisplayByDate(
-    "schedule2",
     "2024-01-22T00:00:00",
     "2024-03-16T23:59:59"
   );
   toggleDisplayByDate(
+    "schedule2",
+    "2024-01-29T00:00:00",
+    "2024-04-20T23:59:59"
+  );
+  toggleDisplayByDate(
     "schedule3",
-    "2023-＊＊-＊＊T00:00:00",
-    "2024-＊＊-＊＊T23:59:59"
+    "2024-01-29T00:00:00",
+    "2024-05-18T23:59:59"
   );
 });
 
