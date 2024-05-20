@@ -202,9 +202,9 @@ $(document).ready(function() {
     }
   }
   // 表示終了日時を指定
-  toggleDisplayByEndDate("schedule1", "2024-04-20T23:59:59");
-  toggleDisplayByEndDate("schedule2", "2024-05-18T23:59:59");
-  toggleDisplayByEndDate("schedule3", "2024-06-15T23:59:59");
+  toggleDisplayByEndDate("schedule1", "2024-06-15T23:59:59");
+  toggleDisplayByEndDate("schedule2", "2024-07-20T23:59:59");
+  toggleDisplayByEndDate("schedule3", "2024-08-17T23:59:59");
 });
 
 
