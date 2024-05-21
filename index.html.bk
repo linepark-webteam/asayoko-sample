@@ -41,7 +41,7 @@
 </script>
 
 <body>
-  <!-- header -->
+  <!-- ヘッダーここから -->
   <header class="header container-fluid fixed-top js-header">
     <div class="d-flex justify-content-between align-items-center px-3 px-lg-5">
       <h1 class="mobile-logo d-block d-lg-none">
@@ -53,7 +53,7 @@
       <!-- <h3><a href="./manager/">世話人紹介</a></h3> -->
     </div>
   </header>
-  <!-- header -->
+  <!-- ヘッダーここまで -->
 
   <!-- TOPに戻るボタン -->
   <a href="#" id="page_top"></a>
@@ -66,41 +66,43 @@
     </div>
   </section>
 
-  <section class="container application">
+  <section class="application">
     <h2>例会申し込みフォーム</h2>
-    <!-- <div class="application-btn schedule1">
+    <div class="application-btn schedule1">
+      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7232">
+        <span class="label">第27回 4月20日(土) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule2">
       <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7357">
         <span class="label">第28回 5月18日(土) 例会お申し込みフォーム</span>
       </a>
-    </div> -->
-    <div class="application-btn schedule1">
+    </div>
+    <div class="application-btn schedule3">
       <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7420">
         <span class="label">第29回 6月15日(土) 例会お申し込みフォーム</span>
       </a>
     </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7560">
-        <span class="label">第30回 7月20日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <!-- <div class="application-btn schedule3">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=＊">
-        <span class="label">第31回 8月17日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div> -->
   </section>
 
   <!-- 守成ロゴ -->
   <section class="shusei-logo">
+    <!-- <h2>例会スケジュール</h2> -->
     <div class="shusei-logo-wrap">
+      <!-- <div class="shusei-logo-description">
+        <a href="#">
+          <span class="label">第18回例会　7月15日</span>
+        </a>
+      </div> -->
       <div class="shusei-logo-img">
-        <img src="./img/slider_logo.png" alt="守成クラブ ロゴ">
+        <img src="./img/slider_logo.png" alt="がんばれ">
       </div>
     </div>
+
   </section>
 
   <!-- CONTENTS -->
-  <section class="container-fluid about">
+  <section class="about">
     <div class="about-wrap">
       <div class="delimiter">
         <div class="section-title">
@@ -123,22 +125,18 @@
         </div>
         <div class="about-text">
           <h2>例会情報</h2>
-          <!-- <div class="schedule1">
+          <div class="schedule1">
+            <h3>第27回例会</h3>
+            <p>日時:2024年4月20日(土)</p>
+          </div>
+          <div class="schedule2">
             <h3>第28回例会</h3>
             <p>日時:2024年5月18日(土)</p>
-          </div> -->
-          <div class="schedule1">
+          </div>
+          <div class="schedule3">
             <h3>第29回例会</h3>
             <p>日時:2024年6月15日(土)</p>
           </div>
-          <div class="schedule2">
-            <h3>第30回例会</h3>
-            <p>日時:2024年7月20日(土)</p>
-          </div>
-          <!-- <div class="schedule3">
-            <h3>第31回例会</h3>
-            <p>日時:2024年8月17日(土)</p>
-          </div> -->
           <p>
             受付9:30～(ゲスト様は9:15までにお願い致します) <br>
             開始時間 : 10:00 <br>
@@ -195,29 +193,24 @@
 
   <!-- 例会申し込みボタン -->
   <div class="application">
-    <!-- <div class="application-btn schedule1">
+    <div class="application-btn schedule1">
+      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7232">
+        <span class="label">第27回 4月20日(土) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule2">
       <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7357">
         <span class="label">第28回 5月18日(土) 例会お申し込みフォーム</span>
       </a>
-    </div> -->
-    <div class="application-btn schedule1">
+    </div>
+    <div class="application-btn schedule3">
       <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7420">
         <span class="label">第29回 6月15日(土) 例会お申し込みフォーム</span>
       </a>
     </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=7560">
-        <span class="label">第30回 7月20日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <!-- <div class="application-btn schedule3">
-      <a href="https://www.shuseiclub.jp/asanoyokohama/entry_form/index.php?e=＊">
-        <span class="label">第31回 8月17日(土) 例会お申し込みフォーム</span>
-      </a>
-    </div> -->
   </div>
 
-  <!-- access -->
+  <!-- アクセス -->
   <section class="access">
     <div class="access-container">
       <div class="access-headline">
@@ -317,7 +310,7 @@
   </section>
 
   <footer>
-    <div class="container footer-items">
+    <div class="footer-items">
       <div class="footer-item">
         <a href="#"><img class="mobile-logo" src="./img/mobile-logo.png" alt="守成クラブあさの横浜" /></a>
         <a href="#"><img class="pc-logo" src="./img/pc-logo.png" alt="守成クラブあさの横浜" /></a>
