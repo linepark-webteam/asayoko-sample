@@ -24,10 +24,10 @@ body {
 }
 
 .img-wrap {
-  background: url(../img/fv.jpg) center top;
+  background: url(../img/fv.jpg) center center;
   background-size: cover;
   position: relative;
-  height: 80svh;
+  height: 50svh;
   max-width: 100%;
 }
 @media screen and (min-width: 960px) {
@@ -73,7 +73,7 @@ body {
   color: #fff;
   width: 100%;
   text-align: center;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(0.8vw, 1rem, 4vw);
@@ -244,7 +244,7 @@ body {
 
 /* 守成クラブ紹介 */
 .about {
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto 5vw;
 }
 @media screen and (min-width: 960px) {
