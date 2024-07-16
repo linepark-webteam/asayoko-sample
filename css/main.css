@@ -638,12 +638,15 @@ form {
   }
 }
 .form-group {
+  display: contents;
+  width: inherit;
   margin-bottom: 15px;
   font-size: calc(18px + 2 * ((100vw - 320px) / 640));
 }
 @media screen and (min-width: 960px) {
   .form-group {
     font-size: 24px;
+
   }
 }
 .form-group label {
