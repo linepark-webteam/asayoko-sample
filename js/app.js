@@ -188,24 +188,27 @@ $(document).ready(function () {
   animateCharacter();
 });
 
-
 // 申込みフォームの表示・非表示自動切換え
-$(document).ready(function() {
-  function toggleDisplayByEndDate(elementClass, endDate) {
-    var now = new Date();
-    var end = new Date(endDate);
+$(document).ready(function () {
 
-    if (now <= end) {
-      $("." + elementClass).show();
-    } else {
-      $("." + elementClass).hide();
-    }
+  function toggleDisplayByDate() {
+    const now = new Date();
+
+    $(".schedule").each(function () {
+      const startDate = new Date($(this).data("start-date"));
+      const endDate = new Date($(this).data("end-date"));
+
+      if (now >= startDate && now < endDate) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
   }
-  // 表示終了日時を指定
-  toggleDisplayByEndDate("schedule1", "2024-07-20T23:59:59");
-  toggleDisplayByEndDate("schedule2", "2024-08-17T23:59:59");
-  toggleDisplayByEndDate("schedule3", "2024-09-21T23:59:59");
+
+  // スケジュールデータの初期化とスケジュール表示の更新
+  toggleDisplayByDate();
+
+  // 指定した時間間隔でスケジュールの表示状態を更新
+  // setInterval(toggleDisplayByDate, 86400000); // 毎日更新
 });
-
-
-
