@@ -1,0 +1,19 @@
+# Basic Authentication
+AuthUserFile /home/users/2/boyfriend.jp-linepark-ayase/web/shusei/demo/.htpasswd
+AuthGroupFile /dev/null
+AuthName "アカウントとパスワードを入力してください"
+AuthType Basic
+require valid-user
+
+# Remove file extensions from URLs
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Remove .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/?$ $1.html [L]

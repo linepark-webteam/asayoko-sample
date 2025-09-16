@@ -1,0 +1,189 @@
+main {
+    padding-top: var(--navbar-height);
+}
+
+.catch, .catch-sub {
+    font-weight: normal;
+}
+
+.catch {
+    font-size: 2.8rem;
+}
+.catch-sub {
+    font-size: 2.4rem;
+    letter-spacing: 5px;
+}
+
+.message-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 7%;
+}
+
+.message-text {
+    width: 63%;
+}
+.message-img {
+    width: 30%;
+}
+
+.message-catch {
+    font-size: 2rem;
+}
+
+.representative .representative-name {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 1399px) {
+    .catch {
+        font-size: 2.4rem;
+    }
+    .catch-sub {
+        font-size: 2rem;
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1.2rem;
+    }
+
+    .message-catch,
+    .representative .representative-name {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .catch {
+        font-size: 2.4rem;
+    }
+    .catch-sub {
+        font-size: 1.8rem;
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1.2rem;
+    }
+
+    .message-catch,
+    .representative .representative-name {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 991px) {
+    .catch {
+        font-size: 2.2rem;
+    }
+    .catch-sub {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1.2rem;
+    }
+
+    .message-catch,
+    .representative .representative-name {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .catch {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .catch-sub {
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .message-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .message-text {
+        width: 100%;
+    }
+    .message-img {
+        width: 50%;
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1.2rem;
+    }
+
+    .message-catch,
+    .representative .representative-name {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 469px) {
+    .catch {
+        font-size: 1.2rem;
+    }
+    .catch-sub {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1rem;
+    }
+
+    .message-catch {
+        font-size: 1.2rem;
+    }
+    .representative .representative-name {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 377px) {
+    .catch {
+        font-size: 1.2rem;
+    }
+    .catch-sub {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+
+    .message-text p,
+    .message-text li,
+    .message-text span,
+    .representative p, 
+    .representative span {
+        font-size: 1rem;
+    }
+
+    .message-catch {
+        font-size: 1.2rem;
+    }
+    .representative .representative-name {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,9 @@
+/old-img
+/references
+composer.json
+composer.lock
+/vendor
+/secret
+/contact
+.htaccess
+.htpasswd

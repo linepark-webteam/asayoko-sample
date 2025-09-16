@@ -1,0 +1,261 @@
+main {
+    padding-top: var(--navbar-height);
+}
+
+body {
+    color: #333;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+p, label, select, input, textarea {
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+.badge {
+    font-size: 1.2rem;
+}
+.answer {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1399px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 1199px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1.2rem;
+    }    
+}
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 469px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 377px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+
+select, input, textarea {
+    border: 3px solid #333;
+    border-radius: 10px;
+    padding: 0 1rem;
+}
+
+select, input {
+    width: 45%;
+}
+@media screen and (max-width: 767px) {
+    select, input {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 469px) {
+    select, input {
+        width: 75%;
+    }
+}
+
+select .default {
+    text-align: center;
+}
+/* セレクト要素のスタイル */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 必要に応じて調整 */
+}
+
+.custom-select {
+    appearance: none; /* デフォルトの矢印を非表示 */
+    -webkit-appearance: none; /* Safari対応 */
+    -moz-appearance: none; /* Firefox対応 */
+    background: #fff;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gray"><path d="M10 12l-5-5h10l-5 5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* 矢印の位置調整 */
+    background-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* 矢印部分に干渉しないように隙間を確保 */
+.select-wrapper:after {
+    content: '';
+    position: absolute;
+    pointer-events: none; /* ユーザーがクリックできないようにする */
+}
+
+textarea {
+    width: 100%;
+}
+.char-count {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    text-align: left;
+}
+.char-count.warning {
+    color: #ff0000; /* 残り文字数50文字未満の場合の警告色 */
+}
+
+.form-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.submit-button-box,
+.confirm-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-button {
+    background-color: #d9f2ff;
+    width: 50%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 0;
+}
+
+.confirm-button {
+    width: 30%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 15px 0;
+}
+/* 修正する ボタン */
+.return {
+    background-color: #e6e6e6;
+}
+/* 送信する ボタン */
+.proceed {
+    background-color: #d9f2ff;
+}
+@media screen and (max-width: 767px) {
+    .confirm-button {
+        width: 50%;
+    }
+}
+
+.error {
+    color: #ff0000;
+}
+
+.totop {
+    color: #0000ff;
+    text-decoration: underline;
+}
+.totop-box {
+    display: inline-block;
+}
+@media screen and (max-width: 469px) {
+    .totop-box {
+        display: flex;
+        flex-direction: column;
+    }
+}

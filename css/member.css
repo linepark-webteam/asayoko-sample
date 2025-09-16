@@ -1,0 +1,45 @@
+main {
+    padding-top: var(--navbar-height);
+}
+
+.shusei-asayoko-map {
+    width: 30vw;
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #be1510;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px 0 #6e6e6e;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.shusei-asayoko-map:hover {
+    /* border-color: #d4d4d4; */
+    box-shadow: 0 0 5px #333333;
+}
+
+.member-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    .member-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .shusei-asayoko-map {
+        width: 45vw;
+        max-width: 700px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .shusei-asayoko-map {
+        width: 60vw;
+        height: auto;
+    }
+}
+

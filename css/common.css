@@ -1,0 +1,374 @@
+/* For test */
+.spacer {
+    height: 500px;
+}
+
+
+/* ページ遷移アニメーション */
+main {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    /* スムーズなアニメーション */
+}
+
+main.loaded {
+    opacity: 1;
+}
+/* ページ遷移アニメーション */
+
+/* Font関連の共通スタイル  */
+* {
+    font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
+}
+.blue-text {
+    color: #008aff;
+    font-weight: bold;
+}
+
+/* Font関連の共通スタイル  */
+
+
+/* ナビゲーションバー(ヘッダー)の共通スタイル */
+:root {
+    --navbar-height: 90px; /* ヘッダーの高さ */
+}
+@media screen and (max-width: 1110px) {
+    :root {
+        --navbar-height: 50px;
+    }
+}
+
+/* 透過状態のヘッダー */
+.navbar.transparent {
+    background-color: rgba(121, 176, 222, 0); /* 透明 */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* 透過解除状態のヘッダー */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #79b0de;
+    transition: background-color 0.3s ease-in-out;
+    color: white;
+    width: 100%;
+    height: var(--navbar-height);
+    z-index: 1000;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.title-logo {
+    width: 120px;
+    height: auto;
+}
+.title-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+@media screen and (max-width: 768px) {
+    .title-logo {
+        width: 15vw;
+    }
+    .title-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-logo {
+        width: 18vw;
+    }
+    .title-text {
+        font-size: 1rem;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #101b79;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 1110px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* 初期設定 */
+    .nav-links {
+        padding: 100px 0;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        background-color: rgba(121, 176, 222, 0.85);
+        width: 100%;
+        height: 110svh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translate(100%,0);
+        transition: transform 0.3s ease-in-out;
+        /* ease-in-outでスムーズに */
+    }
+
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* open時の処理 */
+    .nav-links.open {
+        transform: translate(0,0);
+        /* 画面内に表示 */
+    }
+
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+/* ナビゲーションバー(ヘッダー)の共通スタイル */
+
+
+/* 画像の共通スタイル */
+img {
+    max-width: 100%;
+}
+/* 画像の共通スタイル */
+
+
+/* リストの共通スタイル */
+ul ul li {
+    list-style: none; /* ネストされた ul の li のリストスタイルを none にする */
+}
+/* リストの共通スタイル */
+
+/* ページbody共通スタイル */
+body {
+    color: #333;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+h2, h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+p, span, li, label, select, input, textarea {
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+.badge {
+    font-size: 1.2rem;
+}
+.answer {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1399px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 1199px) {
+    h1 {
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1.2rem;
+    }    
+}
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 469px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 377px) {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    
+    p, span, li, label, select, input, textarea {
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .badge {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ページbody共通スタイル */
+
+
+/* テーブル(表)の共通スタイル */
+th {
+    font-weight: normal;
+    vertical-align: top;
+}
+/* テーブル(表)の共通スタイル */
+
+/* SNSアイコンのスタイル */
+.sns-icon-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.sns-icon {
+    width: 10vw;
+    max-width: 50px;
+    height: auto;
+}
+/* SNSアイコンのスタイル */
+
+/* フッターのスタイル */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-logo {
+    width: 25vw;
+    max-width: 150px;
+}
+.footer-copy {
+    color: #5e5e5e;
+}
+/* フッターのスタイル */
